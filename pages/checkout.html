@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#073bc9">
+    <meta name="description" content="BOMBOCLACT: hambúrgueres artesanais, cardápio completo e pedido online.">
+    <title>Finalizar compra | BOMBOCLACT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Marca a página como "com JS" para liberar as animações de entrada. -->
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="pular" href="#cnt">Pular para o conteúdo</a>
+
+    <!-- CAB: cabeçalho fixo em formato de pílula -->
+    <header class="cab" id="cab">
+        <a class="cab__marca" href="index.html" aria-label="BOMBOCLACT - página inicial">
+            <img src="../assets/BOMBOCLACT.png" alt="BOMBOCLACT" width="995" height="92">
+        </a>
+
+        <nav class="cab__nav" id="nav" aria-label="Navegação principal">
+            <a href="index.html" data-rota="home">Início</a>
+            <a href="produtos.html" data-rota="menu">Cardápio</a>
+            <a href="sobre.html" data-rota="about">Sobre nós</a>
+            <a href="contato.html" data-rota="contact">Contato</a>
+        </nav>
+
+        <div class="cab__acoes">
+            <a class="cab__btn" href="carrinho.html" aria-label="Abrir carrinho">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+                <span class="cab__qtd" id="qtd-carrinho" hidden>0</span>
+            </a>
+            <a class="cab__btn" id="btn-perfil" href="login.html" aria-label="Acessar minha conta">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            </a>
+            <button class="cab__btn cab__menu" type="button" data-acao="menu" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Conteúdo desta página; o JavaScript cuida apenas dos dados e das ações interativas. -->
+    <main class="cnt" id="cnt" data-pagina="checkout" tabindex="-1">
+        <noscript>
+            <p class="sem-js">Para utilizar o cardápio e o pedido online, habilite o JavaScript no navegador.</p>
+        </noscript>
+    </main>
+
+    <!-- ROD: rodapé com a curva amarela do layout -->
+    <footer class="rod">
+        <img class="rod__curva" src="../assets/Rectangle 2.png" alt="" aria-hidden="true">
+        <div class="rod__corpo">
+            <div class="ctn rod__grade">
+                <div class="rod__bloco">
+                    <img class="rod__marca" src="../assets/BOMBOCLACT.png" alt="BOMBOCLACT" width="995" height="92">
+                    <p class="rod__txt">Hambúrguer feito para aproveitar. Escolha no cardápio e peça em poucos cliques.</p>
+                </div>
+
+                <nav class="rod__bloco" aria-label="Links do rodapé">
+                    <h2 class="rod__tit">Navegue</h2>
+                    <ul class="rod__lista">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Cardápio</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="rod__bloco">
+                    <h2 class="rod__tit">Atendimento</h2>
+                    <ul class="rod__lista">
+                        <li>Belo Horizonte - MG</li>
+                        <li><a href="tel:+553133330000">(31) 3333-0000</a></li>
+                        <li>Todos os dias, das 18h às 23h</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="ctn rod__copy">© <span id="ano">2026</span> BOMBOCLACT. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="avs-reg" id="avisos" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/app.js" defer></script>
+</body>
+</html>
